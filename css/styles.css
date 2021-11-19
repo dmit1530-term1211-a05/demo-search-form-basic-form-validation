@@ -1,0 +1,130 @@
+:root {
+    --cream: #e5e1db;
+    --yellow: #cfb450;
+    --grey: #6b6267;
+    --lt-grey: #d2cfd1;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/** screen reader text  - allow the browser to read the content, but visually removes off the screen **/
+.sr-only {
+    position: absolute;
+    left: -999999px;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/** type **/
+h2 {
+
+}
+/** header **/
+header {
+    background-color: var(--cream);
+    padding: 0 1rem;
+}
+/** hiding the nav for demo purposes */
+nav { display: none; }
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-top button {
+    outline: 0;
+    border: none;
+    background-color: var(--grey);
+    color: var(--cream);
+    border-radius: 0.3125rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/** search form **/
+.search-form input[id="searchbar"] {
+    width: 100%;
+    padding-left: 2.5rem;
+    border: none;
+    border-radius: 0.3125rem;
+    line-height: 2.5rem; /*40px*/
+    background-image: url(../img/magnifying-glass.svg);
+    background-repeat: no-repeat;
+    background-size: 1.875rem 1.875rem;
+    background-position: center left 5px;
+    margin-bottom: 1rem;
+}
+
+/** visually hide the submit (search) button **/
+.visually-hidden {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;        
+}
+
+/** login form **/
+section {
+    padding: 1rem;
+}
+.login-form {
+    padding: 1.5rem;
+    border-radius: 0.3125rem;
+    border: 1px solid var(--lt-grey);
+}
+
+.login-form label {
+    display: block;
+}
+
+.login-form > div {
+    margin-bottom: 0.75rem; /*12px*/
+}
+
+.login-form input[type=email],
+.login-form input[type=password] {
+    border: none;
+    border-bottom: 1px solid var(--lt-grey);
+    padding: 0.5rem;
+    width: 15.625rem; /**250px**/
+}
+
+.login-form input[type=submit] {
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
+    padding: 0.25rem 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-form input[type=submit]:hover {
+    background-color: white;
+    color: var(--grey);
+}
+
+/** validating **/
+
+/** creating a required field through CSS 
+.login-form input[type=email]:required {}
+*/
+/** create an invalid state **/
+.login-form input[type=email]:invalid,
+.login-form input[type=password]:invalid {
+    border: 2px solid #7f0000;
+    background: url(../img/x-invlaid.svg) 98% center / auto no-repeat;
+}
+
+/** create a valid state **/
+.login-form input[type=email]:valid,
+.login-form input[type=password]:valid {
+    border: 2px solid #355427;
+    background: url(../img/check-valid.svg) 98% center / auto no-repeat;
+}

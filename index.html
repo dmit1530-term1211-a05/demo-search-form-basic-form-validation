@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Header with accessibile Search Bar, and Basic CSS Form Validation">
+    <title>[Demo] Styling Search Form & Basic CSS Form Validation</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header-top">
+            <h1 class="sr-only">Logo Name</h1>
+            <img src="img/logo.jpg" alt="logo name" />
+            <button>Menu</button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Memberships</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- search form -->
+        <form class="search-form" action="#" method="get" role="search">
+            <label class="sr-only" for="search">Search</label>
+            <input id="searchbar" type="text" name="search" placeholder="Search" />
+            <input class="visually-hidden" type="submit" name="submit" value="search" />
+        </form>
+    </header>
+    <section>
+        <h2>Log in</h2>
+        <form class="login-form" action="#" method="post">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required/>
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="pass" required/>
+            </div>
+            <div>
+                <input type="submit" id="submit" name="submit" value="sign in" />
+            </div>
+        </form>
+    </section>
+    
+
+    
+    
+</body>
+</html>
